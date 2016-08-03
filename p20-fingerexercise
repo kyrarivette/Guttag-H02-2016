@@ -1,0 +1,20 @@
+#Function prompts user to input 10 integers, then prints the largest odd number entered. If no odd numbers entered, prints indicating message.
+L=[]
+x=0
+while (x<10) :
+    L.append(int(raw_input('please enter integer: ')))
+    x= x+1
+
+for item in L:
+    if item%2==0:
+        L.remove(item)
+
+Largest= -100
+for item in L:
+    if Largest<item:
+        Largest=item
+
+if Largest%2==0:
+    print "no odd number inputted"
+else:
+    print "result is "+str((Largest))
